@@ -293,7 +293,7 @@ def check(prefix: os.PathLike = PREFIX, verbose: bool = True):
     """
     assert find_executable("conda"), "💥💔💥 Conda not found!"
 
-    pymaj, pymin = sys.version_info[:2]
+    pymaj, pymin = 3, 8
     sitepackages = f"{prefix}/lib/python{pymaj}.{pymin}/site-packages"
     print(sitepackages)
     assert sitepackages in sys.path, f"💥💔💥 PYTHONPATH was not patched! Value: {sys.path}"
