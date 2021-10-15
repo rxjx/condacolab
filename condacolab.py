@@ -101,7 +101,7 @@ def install_from_url(
     prefix = Path(prefix)
     condameta = prefix / "conda-meta"
     condameta.mkdir(parents=True, exist_ok=True)
-    pymaj, pymin = sys.version_info[:2]
+    pymaj, pymin = 3, 8
 
     with open(condameta / "pinned", "a") as f:
         f.write(f"python {pymaj}.{pymin}.*\n")
